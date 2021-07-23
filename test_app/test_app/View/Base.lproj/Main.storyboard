@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TableViewController" customModule="test_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="su7-fp-wrl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCellIdentifier" rowHeight="156" id="rNe-AL-8mO" customClass="TableViewCell" customModule="test_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="156"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rNe-AL-8mO" id="Tb5-kB-LzW">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ltW-e2-0Wv">
+                                                    <rect key="frame" x="20" y="11" width="374" height="134"/>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="njd-x8-sFh">
+                                                    <rect key="frame" x="20" y="11" width="374" height="134"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bi4-5u-ovb">
+                                                    <rect key="frame" x="20" y="11" width="374" height="134"/>
+                                                </pickerView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ltW-e2-0Wv" firstAttribute="leading" secondItem="Tb5-kB-LzW" secondAttribute="leadingMargin" id="0Ig-CD-6H4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="njd-x8-sFh" secondAttribute="bottom" id="1CS-rf-da2"/>
+                                                <constraint firstItem="njd-x8-sFh" firstAttribute="top" secondItem="Tb5-kB-LzW" secondAttribute="topMargin" id="285-Vx-g9y"/>
+                                                <constraint firstItem="Bi4-5u-ovb" firstAttribute="leading" secondItem="Tb5-kB-LzW" secondAttribute="leadingMargin" id="2aP-iu-sMM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ltW-e2-0Wv" secondAttribute="bottom" id="Ljx-ug-Qwz"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Bi4-5u-ovb" secondAttribute="trailing" id="bDW-fz-gax"/>
+                                                <constraint firstItem="Bi4-5u-ovb" firstAttribute="top" secondItem="Tb5-kB-LzW" secondAttribute="topMargin" id="g4S-cu-U41"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Bi4-5u-ovb" secondAttribute="bottom" id="gyo-By-wJ9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="njd-x8-sFh" secondAttribute="trailing" id="lfp-FS-wVJ"/>
+                                                <constraint firstItem="njd-x8-sFh" firstAttribute="leading" secondItem="Tb5-kB-LzW" secondAttribute="leadingMargin" id="nkx-PB-bSo"/>
+                                                <constraint firstItem="ltW-e2-0Wv" firstAttribute="top" secondItem="Tb5-kB-LzW" secondAttribute="topMargin" id="reY-VP-vVC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ltW-e2-0Wv" secondAttribute="trailing" id="wdU-Gu-AMh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellPicture" destination="ltW-e2-0Wv" id="ioE-WN-TZN"/>
+                                            <outlet property="cellText" destination="njd-x8-sFh" id="yTd-36-fhZ"/>
+                                            <outlet property="cellVariantSelector" destination="Bi4-5u-ovb" id="FdF-0i-PWh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="4Zx-X8-kIr"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zDk-4B-DZK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="su7-fp-wrl" secondAttribute="trailing" id="Ncd-pq-GMD"/>
+                            <constraint firstItem="su7-fp-wrl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SUR-nd-poz"/>
+                            <constraint firstItem="su7-fp-wrl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cYa-U5-ty3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="su7-fp-wrl" secondAttribute="bottom" id="mBf-fT-YOW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="su7-fp-wrl" id="kSo-re-cSK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="78.348214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
