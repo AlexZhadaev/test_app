@@ -8,8 +8,26 @@
 import Foundation
 
 struct Item {
-    var text: String
-    var selector: [Variant]
-    var picture: String
+    var text: Datum
+    var selector: Datum
+    var picture: Datum
     var order: [String]
+    
+    init?(itemData: ItemData) {
+        text = itemData.data[0]
+        picture = itemData.data[1]
+        selector = itemData.data[2]
+        order = itemData.view
+    }
 }
+
+struct ItemVariant {
+    var id: Int
+    var text: String
+    
+    init?(itemData: Variant) {
+        id = itemData.id
+        text = itemData.text
+    }
+}
+

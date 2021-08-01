@@ -16,6 +16,11 @@ class TableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = TableViewViewModel()
+        viewModel?.configureItems { [weak self] in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
     }
     
 }
@@ -34,5 +39,6 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
         return tableViewCell
     }
     
-    
 }
+
+

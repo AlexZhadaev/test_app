@@ -9,26 +9,31 @@ import Foundation
 
 class TableViewCellViewModel {
     
-    private var item: Item
+    private var item: Datum
     
-    var text: String {
-        return item.text
+    private var variants = [String]()
+    
+    var text: String? {
+        return item.data.text
     }
     
-    var selector: [Variant] {
-        return item.selector
+    var selector: [Variant]? {
+        return item.data.variants
     }
     
-    var picture: String {
-        return item.picture
+    var picture: String? {
+        return item.data.url
     }
     
-    var order: [String] {
-        return item.order
-    }
-    
-    init(item: Item) {
+    init(item: Datum) {
         self.item = item
+        self.variants.append(item.data.variants?[0].text ?? "")
+        self.variants.append(item.data.variants?[1].text ?? "")
+        self.variants.append(item.data.variants?[2].text ?? "")
+    }
+    
+    func titlesForRow() -> [String] {
+        return variants
     }
     
 }
